@@ -108,7 +108,71 @@ def pattern7(n):
 
         print('\n')
 
-pattern7(4)
+def pattern8(n):
+    """
+    1 
+
+    2 1
+
+    3 2 1
+
+    4 3 2 1
+    """
+    for row in range(n):
+        for column in range(n):
+            if row >= column:
+                print(row+1 - column,end= ' ')
+        print("\n")
+
+def pattern9(n):
+    """
+    a a a a 
+
+    b b b b
+
+    c c c c
+
+    d d d d
+    """
+    value = ord('a')
+    for row in range(n):
+        for column in range(n):
+            print(chr(value), end=' ')
+        print('\n')
+        value += 1
+
+def pattern10(n):
+    """
+    a b c d 
+
+    a b c d
+
+    a b c d
+
+    a b c d
+    """
+    value = ord('a')
+    for row in range(n):
+        for column in range(n):
+            print(chr(value + column), end=' ')
+        print("\n")
+
+def pattern11(n):
+    """
+    a b c d 
+    b c d e 
+    c d e f
+    d e f g
+    """
+    value = ord('a')
+    for row in range(n):
+        for column in range(n):
+            print(chr(value+row+column), end=' ')
+        print(end='\n')
+    
+
+pattern11(4)
+
 #https://youtu.be/dr-pLeJBr38?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&t=885
 
 
