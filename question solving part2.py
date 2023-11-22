@@ -1,5 +1,6 @@
 #fibonacchi question
 def fibonacci(length):
+    "0 1 1 2 3 5 8 13 21 34 55 89 "
     n1 = 0
     n2 = 1
     temp = 0
@@ -11,4 +12,19 @@ def fibonacci(length):
         n1 = n2
         n2 = temp
 
-fibonacci(5)
+# fibonacci(10)
+
+def prime_number(num):
+    if num == 1:
+        print('Entered number 1 is neither nor Composite number.')
+    else:
+        halfnum = int(num/2)
+        count = 0
+        for value in range(1,halfnum+1):
+            if num % value == 0:
+                count +=1 
+        if count == 1:
+            print(f"Entered number {num} is a Prime Number.")
+        if count >= 2:
+            print(f"Entered number {num} is not a prime Number.")
+prime_number(24)
