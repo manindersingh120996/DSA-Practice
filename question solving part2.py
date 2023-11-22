@@ -27,4 +27,22 @@ def prime_number(num):
             print(f"Entered number {num} is a Prime Number.")
         if count >= 2:
             print(f"Entered number {num} is not a prime Number.")
-prime_number(24)
+# prime_number(24)
+
+def leetcode_question1(num):
+    """
+    input n = 234
+    output = 15
+    explanation:
+    product of digits = 2*3*4 = 24
+    sum of digit = 2+3+4 =  9
+    resutl = 24 - 9
+    """
+    sumv = 0
+    product = 1
+    for x in str(num):
+        sumv += int(x)
+        product *= int(x)
+    print(f"Output : {product - sumv}")
+
+leetcode_question1(4421)
