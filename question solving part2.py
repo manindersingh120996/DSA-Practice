@@ -31,6 +31,7 @@ def prime_number(num):
 
 def leetcode_question1(num):
     """
+    LeetCode Question No. 1281
     input n = 234
     output = 15
     explanation:
@@ -45,4 +46,28 @@ def leetcode_question1(num):
         product *= int(x)
     print(f"Output : {product - sumv}")
 
-leetcode_question1(4421)
+# leetcode_question1(4421)
+
+def leetcode_question2(num):
+    """
+    LeetCode Question no. 191 (Number of 1 Bits)
+    Input = 000000000000000100101
+    Output = 3
+    Explanation : total no. of 3 '1' bits
+    """
+    # n = 1
+    # print(num[2:])
+    num = int(num[2:])
+    # print(num)
+    count = 0
+    while(num != 0):
+        value = int(num % 10)
+        num = int(num / 10)
+        print(num)
+        if value == 1:
+            count +=1
+    print(f'Total No. of "1" are:{count}')
+
+leetcode_question2(bin(11))
+
+        
