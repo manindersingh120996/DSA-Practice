@@ -196,3 +196,10 @@ a b c d e<br />
 1 * * * * * * * * 1
     
 ```
+
+# question solving part2.py file currently contains following patters : 
+**fibonacci :** Prints the fibonacci series till the required number input
+```
+if length = 10
+output = "0 1 1 2 3 5 8 13 21 34 55 89 "
+```
