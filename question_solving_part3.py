@@ -26,16 +26,27 @@ def reverse_integer(number):
         print('No Reverse for input digit 0.')
 
 def reverse_integer_2nd_way(number):
-    if number < 0:
-        value = -0
-    elif number > 0:
-        value = 0
-    number = abs(number)
-
-    while number != 0:
-        remainder = int(number%10)
-        value = value * 10 + remainder
-        number = int(number/10)
-    print(value)
+    # if number < 0:
+    #     value = -0
+    # elif number > 0:
+    #     value = 0
+    value = 0
+    # number = abs(number)
+    if number > 0 :
+        while number != 0:
+            remainder = int(number%10)
+            value = (value * 10) + remainder
+            number = int(number/10)
+        print('Reversed Input number is : ',value)
+    elif number < 0:
+        number = abs(number)
+        while number != 0:
+            remainder = int(number%10)
+            value = (value * 10) + remainder
+            number = int(number/10)
+        print('Reversed Input number is : ',-1*value)
+    else:
+        print('No Reverse for input digit 0.')
+    
 
 reverse_integer_2nd_way(-234)
