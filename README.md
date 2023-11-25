@@ -196,3 +196,35 @@ a b c d e<br />
 1 * * * * * * * * 1
     
 ```
+
+# question solving part2.py file currently contains following patters : 
+**fibonacci :** Prints the fibonacci series till the required number input
+```
+if length = 10
+output = "0 1 1 2 3 5 8 13 21 34 55 89 "
+```
+
+**prime_number :** It checks if the given number is prime or not a prime number
+
+**leetcode question 1 :**
+```
+    """
+    LeetCode Question No. 1281
+    input n = 234
+    output = 15
+    explanation:
+    product of digits = 2*3*4 = 24
+    sum of digit = 2+3+4 =  9
+    resutl = 24 - 9
+    """
+```
+
+**leetcode question 2 :**
+```
+    """
+    LeetCode Question no. 191 (Number of 1 Bits)
+    Input = 000000000000000100101
+    Output = 3
+    Explanation : total no. of 3 '1' bits
+    """
+```
