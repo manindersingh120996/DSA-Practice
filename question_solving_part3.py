@@ -25,5 +25,17 @@ def reverse_integer(number):
     else:
         print('No Reverse for input digit 0.')
 
+def reverse_integer_2nd_way(number):
+    if number < 0:
+        value = -0
+    elif number > 0:
+        value = 0
+    number = abs(number)
 
-reverse_integer(-2344)
+    while number != 0:
+        remainder = int(number%10)
+        value = value * 10 + remainder
+        number = int(number/10)
+    print(value)
+
+reverse_integer_2nd_way(-234)
