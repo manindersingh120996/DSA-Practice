@@ -26,4 +26,4 @@ def reverse_integer(number):
         print('No Reverse for input digit 0.')
 
 
-reverse_integer(123)
+reverse_integer(-2344)
