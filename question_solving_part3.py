@@ -49,4 +49,17 @@ def reverse_integer_2nd_way(number):
         print('No Reverse for input digit 0.')
     
 
-reverse_integer_2nd_way(-234)
+def base_10_complement(number):
+    """
+    Taking input as integer making it complement in binary form
+    and converting that complement back to integer
+    example : input = 5
+    output = 2
+    explanation : 5 in binary "101", it's complement is "010" which is integer 2
+    """
+    
+    while number != 0:
+        print(number & 1)
+        number = number >> 1
+
+base_10_complement(5)
