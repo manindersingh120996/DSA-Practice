@@ -57,9 +57,17 @@ def base_10_complement(number):
     output = 2
     explanation : 5 in binary "101", it's complement is "010" which is integer 2
     """
-    
+    position = 0
+    value = 0
     while number != 0:
-        print(number & 1)
+        bin_val = number & 1
+        if bin_val == 0:
+            bin_val = 1
+        elif bin_val == 1 :
+            bin_val = 0
         number = number >> 1
+        value = value + (bin_val * (2**(position)))
+        position += 1 
+    print(value)
 
-base_10_complement(5)
+base_10_complement(2)
