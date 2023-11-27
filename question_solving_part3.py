@@ -49,7 +49,7 @@ def reverse_integer_2nd_way(number):
         print('No Reverse for input digit 0.')
     
 
-def base_10_complement(number):
+def base_10_complement(n):
     """
     Taking input as integer making it complement in binary form
     and converting that complement back to integer
@@ -59,15 +59,38 @@ def base_10_complement(number):
     """
     position = 0
     value = 0
-    while number != 0:
-        bin_val = number & 1
-        if bin_val == 0:
-            bin_val = 1
-        elif bin_val == 1 :
-            bin_val = 0
-        number = number >> 1
-        value = value + (bin_val * (2**(position)))
-        position += 1 
-    print(value)
+    if n == 0:
+        # print('inside if')
+        print(f"Complement of input {n} is : {1}")
+    elif n !=0:
+        while n != 0:
+            bin_val = n & 1
+            if bin_val == 0:
+                bin_val = 1
+            elif bin_val == 1 :
+                bin_val = 0
+            n = n >> 1
+            value = value + (bin_val * (2**(position)))
+            position += 1 
+        print(f"Complement of input {n} is : {value}")
+import math
+def power_of_two(n):
+    """
+    return True if input number is power of two
+    example : input = 1
+    output = true
+    explanation 2^0 = 1
+    leet code question: 231
+    """
+    value = math.log(n) / math.log(2)
+    # print(value)
+    if 2**value == n:
+        print(True)
+    else:
+        print(False)
 
-base_10_complement(2)
+power_of_two(3)
+
+
+
+
