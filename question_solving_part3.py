@@ -82,12 +82,14 @@ def power_of_two(n):
     explanation 2^0 = 1
     leet code question: 231
     """
+    if n<=0:
+        print(bool(0))
     value = math.log(n) / math.log(2)
     # print(value)
     if 2**value == n:
-        print(True)
+        print(bool(1))
     else:
-        print(False)
+        print(bool(0))
 
 power_of_two(3)
 
