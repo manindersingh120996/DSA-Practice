@@ -20,7 +20,8 @@ def unique_element(arr):
     """
     input = array of size 2m + 1
     output = 1 unique element
-    e
+    example: input = [11,15,22,15,22,11,3]
+    output = 3
     """
     ans = 0
     for element in arr:
