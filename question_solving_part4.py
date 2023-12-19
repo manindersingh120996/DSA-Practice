@@ -47,3 +47,26 @@ def uniqueOccurance(arr):
         print(False)
 
 uniqueOccurance([1,2,1])
+
+
+def findDuplicate(arr):
+    """
+    Sample Input 1:
+                    
+                    5
+                    4 2 1 3 1
+                    
+                    7
+                    6 3 1 5 4 3 2
+Sample Output 1:
+                1
+                3
+"""
+    n = len(arr)
+    sum = ((n-1)*n)/2
+    sum_arr = 0
+    for ele in arr:
+        sum_arr += ele
+    return int(sum_arr-sum)
+
+findDuplicate()
