@@ -55,7 +55,7 @@ def findDuplicate(arr):
                     
                     5
                     4 2 1 3 1
-                    
+
                     7
                     6 3 1 5 4 3 2
 Sample Output 1:
@@ -69,4 +69,31 @@ Sample Output 1:
         sum_arr += ele
     return int(sum_arr-sum)
 
-findDuplicate()
+# findDuplicate([1,2,4,6,2,3,5])
+
+def findDuplicates(self, nums):
+    """
+    LeetCode question 442
+    Example 1:
+
+    Input: nums = [4,3,2,7,8,2,3,1]
+    Output: [2,3]
+    Example 2:
+
+    Input: nums = [1,1,2]
+    Output: [1]
+    Example 3:
+
+    Input: nums = [1]
+    Output: []
+
+    """
+    nums = sorted(nums)
+    value = []
+    for x in range(len(nums)-1):
+        if nums[x] == nums[x+1]:
+            value.append(nums[x])
+    return value
+
+
+
