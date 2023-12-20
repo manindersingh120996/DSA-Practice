@@ -95,5 +95,18 @@ def findDuplicates(self, nums):
             value.append(nums[x])
     return value
 
-
+def array_intersection(m,n,arr,brr):
+        # Return a list containing all the common elements in arr and brr.
+    inter = []
+    for ind1 in range(n):
+        for ind2 in range(m):
+            if arr[ind1] == brr[ind2]:
+                inter.append(arr[ind1])
+                brr[ind2] = float(inf)
+                break
+    
+    if len(inter) == 0:
+        return [-1]
+    else:
+        return inter
 
