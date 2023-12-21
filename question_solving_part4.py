@@ -109,4 +109,24 @@ def array_intersection(m,n,arr,brr):
         return [-1]
     else:
         return inter
+    
+def array_intersection_optimised(m,n,arr,brr):
+    inter = []
+    i = 0
+    j = 0
+    while(i<n and j<m):
+        if arr[i] < brr[j]:
+            i += 1
+        elif arr[i] == brr[j]:
+            inter.append(arr[i])
+            i += 1
+            j += 1
+        elif arr[i] > brr[j]:
+            j += 1
+
+    
+    if len(inter) == 0:
+        return [-1]
+    else:
+        return inter
 
