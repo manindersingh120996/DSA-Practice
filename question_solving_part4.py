@@ -129,4 +129,33 @@ def array_intersection_optimised(m,n,arr,brr):
         return [-1]
     else:
         return inter
+    
+def pairSum(arr, s):
+    """
+    Sample Input 1:
+    5 5
+    1 2 3 4 5
+    Sample Output 1:
+    1 4
+    2 3
+    Explaination For Sample Output 1:
+    Here, 1 + 4 = 5
+        2 + 3 = 5
+    Hence the output will be, (1,4) , (2,3).
+"""
+    first_index = 0
+    second_index = 1
+    lis = []
+    # temp = []
+    for first in range(len(arr)):
+        for second in range(first+1,len(arr)):
+            if arr[first] + arr[second] == s:
+                temp = []
+                temp.append(min(arr[first],arr[second]))
+                temp.append(max(arr[first],arr[second]))
+                lis.append(temp)
+            # temp = []
+    # print(lis)
+    lis.sort()
+    return lis
 
