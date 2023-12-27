@@ -20,4 +20,28 @@ def binary_search(arr,element):
     if found == 0:
         print("element not found")
 
-binary_search([11,13,45,55,78,112],45)
+# binary_search([11,13,45,55,78,112],45)
+
+def first_occurance(arr,element):
+    start_index = 0
+    last_index = len(arr)
+    arr_len = len(arr)
+    ans = -1
+    while(start_index < last_index):
+        mid_index = int((start_index+last_index)/2)
+        if arr[mid_index] == element:
+            ans = mid_index
+            last_index = mid_index
+        if arr[mid_index] < element:
+            start_index = mid_index + 1
+        elif arr[mid_index] > element:
+            last_index = mid_index
+    
+    if ans == -1:
+        print(f"Element {element} is not found in the given list.")
+    else:
+        print(f"Element {element} occurs at index position of {ans} .")
+
+first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],6)
+
+
