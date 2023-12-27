@@ -40,8 +40,28 @@ def first_occurance(arr,element):
     if ans == -1:
         print(f"Element {element} is not found in the given list.")
     else:
-        print(f"Element {element} occurs at index position of {ans} .")
+        print(f"Element {element} occurs at index position of {ans}")
 
-first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],6)
+first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
+def last_occurance(arr,element):
+    first_index = 0
+    last_index = len(arr)
+    arr_len = len(arr)
+    ans = -1
+    while last_index > first_index:
+        mid_index = int((first_index+last_index)/2)
+        if arr[mid_index] == element:
+            ans = mid_index
+            first_index = mid_index + 1
+        if arr[mid_index] < element:
+            first_index = mid_index + 1
+        elif arr[mid_index] > element:
+            last_index = mid_index
+    
+    if ans == -1:
+        print(f"Element {element} does not exists in the list")
+    else:
+        print(f"Element {element} exists at index position of {ans}")
 
+last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
