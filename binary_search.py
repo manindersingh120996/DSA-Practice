@@ -71,13 +71,15 @@ def last_occurance(arr,element):
 # last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
 def total_count(arr,element):
-    first_occurance = first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
-    last_occurance = last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
-    if first_occurance == -1 and last_occurance == -1:
+    first_occurancee = first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+    last_occurancee = last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+    if first_occurancee == -1 and last_occurancee == -1:
         print('element does not occur')
-    elif first_occurance == last_occurance and first_occurance != -1:
+    elif first_occurancee == last_occurancee and first_occurancee != -1:
         print('count is 1')
     else:
-        print(last_occurance - first_occurance + 1)
+        print(last_occurancee - first_occurancee + 1)
+
+total_count([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
 
