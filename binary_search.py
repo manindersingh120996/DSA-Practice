@@ -39,10 +39,12 @@ def first_occurance(arr,element):
     
     if ans == -1:
         print(f"Element {element} is not found in the given list.")
+        return -1
     else:
         print(f"Element {element} occurs at index position of {ans}")
+        return ans
 
-first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+# first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
 def last_occurance(arr,element):
     first_index = 0
@@ -61,7 +63,21 @@ def last_occurance(arr,element):
     
     if ans == -1:
         print(f"Element {element} does not exists in the list")
+        return -1
     else:
         print(f"Element {element} exists at index position of {ans}")
+        return ans
 
-last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+# last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+
+def total_count(arr,element):
+    first_occurance = first_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+    last_occurance = last_occurance([1,2,3,4,4,4,5,6,6,6,6,7],4)
+    if first_occurance == -1 and last_occurance == -1:
+        print('element does not occur')
+    elif first_occurance == last_occurance and first_occurance != -1:
+        print('count is 1')
+    else:
+        print(last_occurance - first_occurance + 1)
+
+
