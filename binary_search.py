@@ -83,17 +83,34 @@ def total_count(arr,element):
 # total_count([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
 
-def pivot_element_find(arr):
-    start = 0
-    end = len(arr)
-    while(start < end):
-        mid = int((start+end)/2)
-        if arr[mid] >= arr[0]:
-            start = mid + 1
-            print('start',start)
-        else:
-            end = mid
-            print('end',end) 
-    print(start)
+# def pivot_element_find(arr):
+#     start = 0
+#     end = len(arr)
+#     while(start < end):
+#         mid = int((start+end)/2)
+#         if arr[mid] >= arr[0]:
+#             start = mid + 1
+#             print('start',start)
+#         else:
+#             end = mid
+#             print('end',end) 
+#     print(start)
 
-pivot_element_find([2,3,4,5])
+# pivot_element_find([2,3,4,5])
+    
+def pivot_in_reverse(arr):
+    start = 0
+    end = len(arr) - 1
+    while(start < end):
+        middle = int((start+end)/2)
+
+        if arr[middle] < arr[0]:
+            x = 'if'
+            start = middle + 1
+        else:
+            x = 'else'
+            end = middle
+        # print(x,middle,arr[middle])
+    print(middle,arr[middle])
+
+pivot_in_reverse([21,20,18,14,12,38,35,33,27])
