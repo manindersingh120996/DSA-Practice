@@ -80,6 +80,20 @@ def total_count(arr,element):
     else:
         print(last_occurancee - first_occurancee + 1)
 
-total_count([1,2,3,4,4,4,5,6,6,6,6,7],4)
+# total_count([1,2,3,4,4,4,5,6,6,6,6,7],4)
 
 
+def pivot_element_find(arr):
+    start = 0
+    end = len(arr)
+    while(start < end):
+        mid = int((start+end)/2)
+        if arr[mid] >= arr[0]:
+            start = mid + 1
+            print('start',start)
+        else:
+            end = mid
+            print('end',end) 
+    print(start)
+
+pivot_element_find([2,3,4,5])
